@@ -1,0 +1,115 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage[thmmarks]{ntheorem}
+\usepackage{amssymb}
+\usepackage{exscale}
+\usepackage{amsfonts}
+\usepackage{eucal}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{commath}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{mathtools}
+
+\usepackage{amsmath}                                                                                                                                        
+\setlength{\parindent}{0pt}
+
+\usepackage{scrextend}
+\changefontsizes{13pt}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{20pt}
+
+\usepackage[unicode]{hyperref}
+
+\newenvironment{problem}[2][Bài]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\theoremheaderfont{\bfseries}
+\theorembodyfont{\normalfont}
+\theoremseparator{:}
+\theoremsymbol{$\blacksquare$}
+\newtheorem*{proof}{Giải}
+
+
+\newmdenv[linecolor=black,skipabove=\topsep,skipbelow=\topsep,
+leftmargin=-5pt,rightmargin=-5pt,
+innerleftmargin=5pt,innerrightmargin=5pt]{mybox}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\newcommand{\heva}[1]{\left\{ 
+	\begin{aligned}#1\end{aligned}\right.}
+
+
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\setcounter{secnumdepth}{-1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Thống kê nâng cao cho Khoa học Dữ liệu}
+\cfoot{\thepage}
+\rhead{Nhóm 6}
+\title{Tiểu luận cuối kỳ}
+
+\allowdisplaybreaks
+
+\author{NHÓM 4}
+
+\date{\today}%
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\thispagestyle{empty}
+	\begin{center}
+		\textbf{\large{ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH\\TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}}\\
+		---------------*---------------\\
+		\vspace*{5.5cm}
+		{\textcolor[rgb]{0.0,0.0,1.0}{\textbf{\Large{TIỂU LUẬN CUỐI KÌ}}}}\\
+		\vspace{1cm}
+		\textbf{\huge{\textcolor[rgb]{1.0,0.0,0.0}{THÔNG KÊ NÂNG CAO CHO KHOA HỌC DỮ LIỆU}}}\\
+		\vspace*{4cm}
+		\begin{tabular}{rll}
+			{Giảng viên hướng dẫn:} &{\bf TS. Hoàng Văn Hả} &  \\
+			{Nhóm thực hiện:}     & {\textbf{Nhóm 6}} & \\
+			{Học viên:} & {\textbf{Lý Phi Long}} &{MSHV: 20C29028} \\
+			& {\textbf{Nguyễn Mạnh phú}} &{MSHV: 20C29032}
+		\end{tabular}
+		\vfill
+		\normalsize{TP. Hồ Chí Minh $-$ Tháng 05, 2022}
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\thispagestyle{empty}
+
+\chapter{Lý Thuyết}
+\input{A-1-2.tex}
+\input{A-1-6}
+\input{A-1-10}
+\input{A-1-14}
+
+\chapter{Thực hành}
+
+\input{B-2-2}
+
+\end{document}
