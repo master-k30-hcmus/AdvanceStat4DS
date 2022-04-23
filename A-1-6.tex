@@ -3,9 +3,54 @@
 
 \begin{problem}{1.6}
 % Type problem here!!!
-$\overline{X}_1$ và $S^2_1$ là trung bình mẫu và phương sai mẫu của một cỡ mẫu $n_1$ được chọn từ một tổng thể kỳ vọng $\mu_1$ và phương sai $\sigma_1^2$. 
+$\overline{X}_1$ và $S^2_1$ là trung bình mẫu và phương sai mẫu của một cỡ mẫu $n_1$ được chọn từ một tổng thể kỳ vọng $\mu_1$ và phương sai $\sigma_1^2$. Tương tự $\overline{X}_2$ và $S^2_2$ là trung bình mẫu và phương sai mẫu của một cỡ mẫu $n_2$ được chọn từ một tổng thể thứ 2 độc lập với tổng thể thứ nhất có kỳ vọng $\mu_2$ và phương sai $\sigma_2^2$
+\begin{enumerate}[label=(\alph*)]
+\item Chứng tỏ rằng $\overline{X}_1$-$\overline{X}_2$ là một ước lượng không chệch cho $\mu_1$-$\mu_2$.
+\item Tìm sai số chuẩn (Standard Error, tức là đọ lệch chuẩn của ước lượng) của $\overline{X}_1$-$\overline{X}_2$. Làm thế nào để ước lượng sai số chuẩn này
+\item Giả sử phương sai hai tổng thể bằng nhau, tức là $\sigma_1^2$= $\sigma_2^2$=$\sigma^2$. Chứng tỏ rằng:
+\[ S^2_p = \dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2}\]
+là một ước lượng không chệch của  $\sigma^2$.
+\end{enumerate}
 \end{problem}
 
 \begin{proof}
-% Type solution here!!!
+(a)\\
+Ta biết $\overline{X}_1$, $\overline{X}_2$ lần lượt là ước lượng không chệch của $\mu_1$ và $\mu_2$, nên:
+\begin{equation*}
+{E(\overline{X}_1-\overline{X}_2) = E(\overline{X}_1)-E(\overline{X}_2) = \mu_1-\mu_2}
+\end{equation*}
+Vậy $\overline{X}_1$-$\overline{X}_2$ là một ước lượng không chệch cho $\mu_1$-$\mu_2$.\\
+(b)\\
+Ta có:
+\begin{equation*}
+Var(\overline{X_1}-\overline{X_2}) = Var(\overline{X_1})-Var(\overline{X_2})
+\end{equation*}
+\begin{equation*}
+\Rightarrow Var(\overline{X}_1-\overline{X}_2) = Var(\overline{X}_1)-Var(\overline{X}_2) =  Var(\frac1n_1\sum_{i=0}^{n_1}X_i)-Var(\frac1n_2\sum_{j=0}^{n_2}X_j)
+\end{equation*}
+\begin{equation*}
+\Rightarrow Var(\overline{X}_1-\overline{X}_2) = \frac{1}{n^2_1}Var(x_1X_i)-\frac{1}{n^2_2}Var(n_2X_j) = \frac{1}{n_1}S^2_1-\frac{1}{n_2}S^2_2 
+\end{equation*}
+Vậy độ lệch chuẩn của ước lượng $\overline{X}_1$-$\overline{X}_2$ là $\sqrt{\frac{1}{n_1}S^2_1-\frac{1}{n_2}S^2_2}$\\
+(c)\\
+Ta có:
+\begin{equation*}
+S^2_p = \dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2}
+\end{equation*}
+\begin{equation*}
+\Rightarrow E(S^2_p) = E(\dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2})
+\end{equation*}
+\begin{equation*}
+\Rightarrow E(S^2_p) = \dfrac{(n_1-1)E(S^2_1)+(n_2-1)E(S^2_2)}{n_1+n_2-2}
+\end{equation*}
+\begin{equation*}
+\Rightarrow E(S^2_p) = \dfrac{(n_1-1)\sigma_1^2+(n_2-1)\sigma_2^2}{n_1+n_2-2}
+\end{equation*}
+\begin{equation*}
+\Rightarrow E(S^2_p) = \dfrac{(n_1-1)\sigma^2+(n_2-1)\sigma^2}{n_1+n_2-2} 
+\end{equation*}
+\begin{equation*}
+\Rightarrow E(S^2_p) = \sigma^2
+\end{equation*}
+Vậy $S^2_p$ là một ước lượng không chệch của  $\sigma^2$.
 \end{proof}
