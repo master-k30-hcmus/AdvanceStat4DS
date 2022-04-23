@@ -3,8 +3,37 @@
 
 \begin{problem}{1.10}
 % Type problem here!!!
+Xét $X$ là một biến ngẫu nhiên tuân theo phân phối mũ dịch cuyển có hàm mật độ xác suất cho bởi
+\[\]
+Hãy tìm một ước lượng hợp lý cực đại cho tham số $\lambda$ và $\gamma$ dựa trên mẫu ngẫu nhiên $\left(X_1,X_2,..,X_n\right)$
 \end{problem}
 
 \begin{proof}
 % Type solution here!!!
+Theo định nghĩa, ta xác định được hàm hợp lý $L\left(\gamma, \theta\right)$ với mẫu ngẫu nhiên $x = \left(x_1, x_2,...,x_n\right)$ là:
+\[L\left(\left.\lambda,\theta\right|x\right)=\prod_{i=1}^nf\left(\left.x_i\right|\lambda,\theta\right)=\prod_{i=1}^n\lambda^ne^{-\lambda\left(x_i-\theta\right)}=\lambda^ne^{-\lambda\left(\sum_{i=0}^nx_i-n\theta\right)}\\L(\lambda,\theta)\]
+Lấy log hai vế, ta được:
+\begin{equation*}
+\mathbb{L}(\lambda,\theta)=\ln\left(L\left(\left.\lambda,\theta\right|x\right)\right)=n\ln(\lambda)-\lambda\left(\sum_{i=0}^nx_i-n\theta\right)=n\ln\lambda-\lambda\sum_{i=0}^nx_i+\lambda n\theta
+\end{equation*}
+Ta đi tìm cực đại của hàm số $L(\lambda,\theta)$ theo hai biến $\lambda$ và $\theta$ bằng cách tính đạo hàm từng phần
+\begin{equation*}
+\nabla L=\begin{bmatrix}\frac{\partial L}{\partial\lambda}\\\frac{\partial L}{\partial\theta}\end{bmatrix}=\begin{bmatrix}\frac n\lambda-\sum_{i=0}^nx_i+n\theta\\\lambda n\end{bmatrix}
+\end{equation*}
+Ta đi tìm cực đại đối với biến $\lambda$:
+\begin{equation*}
+\frac n\lambda-n\sum_{i=0}^n\left(x_i-\theta\right)=0\
+\end{equation*}
+\begin{equation*}
+\Rightarrow\widehat\lambda=\frac1n\sum_{i=0}^n\left(x_i-\theta\right)
+\end{equation*}
+Đối với biến $\theta$:
+\begin{equation*}
+\frac{\partial L}{\partial\theta}=\lambda n\geqslant0\\
+\end{equation*}
+Ta có thể được $\lambda n$ luôn dương, đồng nghĩa với việc khi tìm giá trị cực đại của biến $\theta$, ta sẽ chọn $\theta$ càng lớn càng tốt $\left( \theta \rightarrow \inf \right)$. Tuy nhiên, ta có điều kiện chặn trên $\theta \leqslant x $, suy ra được giá trị $\theta$ ta có thể là giá trị nhỏ nhất của biến ngẫu nhiên $X$, tức là:
+\begin{equation*}
+\hat \theta = min(X)
+\end{equation*}
+Vậy ta đã tìm được 2 ước lượng hợp lý cực đại của 2 tham số $\lambda, \theta$
 \end{proof}

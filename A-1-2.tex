@@ -9,11 +9,24 @@
 Xét $X_1,X_2,...,X_7$ là một mẫu ngẫu nhiên được chọn từ một tổng thể có kỳ vọng $\mu$ và phương sai $\sigma^2$. Xét hai ước lượng của $\mu$ là
 \[ \hat{\mu}_1 = \dfrac{X_1+X_2+...+X_7}{7} \quad \textit{và} \quad \hat{\mu}_1 = \dfrac{2X_1-2X_6+X_4}{2}\]
 \begin{enumerate}[label=(\alph*)]
-	\item Kiểm tra tính không chệch của hai ước lượng này.
-	\item Ước lượng nào là ước lượng tốt cho $\mu$? Giải thích.
+\item Kiểm tra tính không chệch của hai ước lượng này.
+\item Ước lượng nào là ước lượng tốt cho $\mu$? Giải thích.
 \end{enumerate}
 \end{problem}
 
 \begin{proof}
 % Type solution here!!!
+a)\\
+Để kiểm tra tính không chệch ta sẽ đi tính kỳ vọng của hai ước lượng $\mu_1$ và $\mu_2$, ta được
+\begin{equation*}
+\left\{\begin{array}{l}E\left[{\widehat\mu}_1\right]=E\left[\dfrac{X_1+X_2+...+X_7}7\right]=\dfrac17\left(\sum_{i=1}^7E\left[X_i\right]\right)=\mu\\E\left[{\widehat\mu}_2\right]=E\left[\dfrac{2X_1-2X_6+X_4}2\right]=\dfrac12\left(2E\left[X_1\right]-2E\left[X_6\right]+E\left[X_4\right]\right)=\dfrac\mu2\end{array}\right.
+\end{equation*}
+Ta có thể thấy $\hat \mu_1$ là ước lượng không chệch do $\mathbb{E}\left[\hat \mu_1 \right] - \mu = 0$ và $\hat \mu_2$ là ước lượng chệch do $\mathbb{E}\left[\hat \mu_2 \right] - \mu \neq 0$
+
+b)\\
+Để kiểm tra giữa 2 ước lượng $\mu_1$ và $\mu_2$, ước lượng nào tốt hơn, thì ta sẽ tính phương sai của từng ước lượng:
+\begin{equation*}
+\left\{\begin{array}{l}Var\left[{\widehat\mu}_1\right]=Var\left[\frac17\sum_{i=1}^7X_i\right]=\frac1{49}\sum_{i=1}^7Var\left[X_i\right]=\frac{\sigma^2}7\\Var\left[{\widehat\mu}_2\right]=Var\left[\frac{2X_1-2X_6+X_4}2\right]=\frac14\left(4\sigma^2+4\sigma^2+\sigma^2\right)=\frac94\sigma^2\end{array}\right.\\
+\end{equation*}
+Ta có thể thấy được $var[\mu_1] < var[\mu_2]$, theo phương pháp ước lượng vững, ước lượng $\hat \mu_1$ là ước lượng tốt hơn.
 \end{proof}
