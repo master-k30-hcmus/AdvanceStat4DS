@@ -4,9 +4,9 @@
 \begin{problem}{1.14}
 % Type problem here!!!
 \textbf{(Ước lượng Bayes)} Xét $X_1, X_2,.., X_n$ là một mẫu ngẫu nhiên  tuân theo phân phối Poisson có hàm khối xác suất:
-\begin{equation}
+\begin{equation*}
 f(x|\lambda)=\frac{e^{-\lambda}\lambda^x}{x!} , x=0, 1, 2,... n
-\end{equation}
+\end{equation*}
 Giả sử rằng phân phối tiên nghiệm (prior distribution) $\pi(\lambda)$ là phân phối Gamma(m+1, (m+1)/$\lambda_0$)\\
 (a) Hãy tìm phân phối hậu nghiệm $\pi(\lambda|x_1,...,x_n)$ của $\theta$.\\
 (b) Tìm ước lượng Bayes cho $\lambda$.
@@ -16,27 +16,28 @@ Giả sử rằng phân phối tiên nghiệm (prior distribution) $\pi(\lambda)
 % Type solution here!!!
 (a)\\
 Ta có các giả thiết:
-\begin{equation}
+\begin{equation*}
 f(x|\lambda)=\prod_{i=1}^nf(x_i|\lambda)=\prod_{i=1}^n\frac{e^{-\lambda}\lambda^{x_i}}{x_i!} \sim e^{-n\lambda}\lambda^{\sum_{i=0}^n{x_i}}
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \pi(\lambda) = \lambda^me^{-\lambda\frac{m+1}{\lambda_0}}
-\end{equation}
+\end{equation*}
 Với điều kiện X = x, $\Rightarrow$ phân phối hậu nghiệm của $\lambda$ là
-\begin{equation}
+\begin{equation*}
 \pi(\lambda|x)\sim f(x|\lambda)\pi(\lambda)\sim (e^{-n\lambda}\lambda^{\sum_{i=0}^n{x_i}})(\lambda^me^{-\lambda\frac{m+1}{\lambda_0}})
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \Rightarrow\pi(\lambda|x)\sim \lambda^{\sum_{i=0}^n{x_i}+m}e^{-\lambda(n+\frac{m+1}{\lambda_0})}
-\end{equation}
+\end{equation*}
 Vậy $\pi(\lambda|x)$ tuân theo phân phối Gamma với 2 tham số mới $\alpha = \sum_{i=0}^n{x_i}+m$  và $\beta=n+\frac{m+1}{\lambda_0}$\\
 (b) \\
 Ta có phân phối hậu nghiệm Gamma($\sum_{i=0}^n{x_i}+m, \beta=n+\frac{m+1}{\lambda_0}$) có giá trị trung bình
-\begin{equation}
+\begin{equation*}
 \mu_\lambda=\frac{(\sum_{i=0}^n{x_i}+m)\lambda_0}{m+1+n\lambda_0}
-\end{equation}
-$\Rightarrow $ Ước lượng Bayes của $\lambda$ là
-\begin{equation}
+\end{equation*}
+Vậy uớc lượng Bayes của $\lambda$ là
+\begin{equation*}
 \mu_\lambda=\frac{(\sum_{i=0}^n{x_i}+m)\lambda_0}{m+1+n\lambda_0}
-\end{equation}
+\end{equation*}
+Ta đã chứng minh xong
 \end{proof}
