@@ -1,5 +1,5 @@
-\section*{Bài 1.6}
-\addcontentsline{toc}{section}{\protect\numberline{}Bài 1.6}%
+\subsection{Bài 1.6}
+%\addcontentsline{toc}{section}{\protect\numberline{}Bài 1.6}%
 
 \begin{problem}{1.6}
 % Type problem here!!!
@@ -23,10 +23,7 @@ Vậy $\overline{X}_1$-$\overline{X}_2$ là một ước lượng không chệch
 (b)\\
 Ta có:
 \begin{equation*}
-Var(\overline{X_1}-\overline{X_2}) = Var(\overline{X_1})-Var(\overline{X_2})
-\end{equation*}
-\begin{equation*}
-\Rightarrow Var(\overline{X}_1+\overline{X}_2) = Var(\overline{X}_1)+Var(\overline{X}_2) =  Var(\frac1n_1\sum_{i=0}^{n_1}X_i)+Var(\frac1n_2\sum_{j=0}^{n_2}X_j)
+Var(\overline{X}_1-\overline{X}_2) = Var\left(\overline{X}_1\right)+Var\left(\overline{X}_2\right) =  Var\left(\frac1n_1\sum_{i=0}^{n_1}X_i\right)+Var\left(\frac1n_2\sum_{j=0}^{n_2}X_j\right)
 \end{equation*}
 \begin{equation*}
 \Rightarrow Var(\overline{X}_1+\overline{X}_2) = \frac{1}{n^2_1}Var(n_1X_i)+\frac{1}{n^2_2}Var(n_2X_j) = \frac{n^2_1}{n^2_1}Var(X_i)+\frac{n^2_2}{n^2_2}Var(X_i)= S^2_1 + S^2_2 
@@ -38,7 +35,7 @@ Ta có:
 S^2_p = \dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2}
 \end{equation*}
 \begin{equation*}
-\Rightarrow E(S^2_p) = E(\dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2})
+\Rightarrow E(S^2_p) = E\left(\dfrac{(n_1-1)S^2_1+(n_2-1)S^2_2}{n_1+n_2-2}\right)
 \end{equation*}
 \begin{equation*}
 \Rightarrow E(S^2_p) = \dfrac{(n_1-1)E(S^2_1)+(n_2-1)E(S^2_2)}{n_1+n_2-2}
